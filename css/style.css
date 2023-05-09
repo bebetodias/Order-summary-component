@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Colors */
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-light-blue: hsl(245, 84%, 69%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-white: hsl(255, 100%, 100%);
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 0.9rem;
+  background: var(--clr-pale-blue) url(../images/pattern-background-mobile.svg)
+    no-repeat;
+}
+
+main {
+  background-color: var(--clr-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 450px;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--clr-dark-blue);
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.8;
+  color: var(--clr-desaturated-blue);
+}
+
+#order-summary {
+  padding: 1.7rem 1.6rem 8px;
+}
+
+.full {
+  width: 100%;
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 1.2rem;
+  margin: 1.5rem auto 1.6rem;
+  padding: 1.125rem 1rem 1rem;
+  text-align: left;
+  background: var(--clr-very-pale-blue);
+  border-radius: 1rem;
+}
+
+.plan a {
+  text-align: right;
+  color: var(--clr-bright-blue);
+}
+.plan a:hover {
+  color: var(--clr-light-blue);
+}
+
+.btn {
+  display: block;
+  background-color: transparent;
+  padding: 0.9rem;
+  margin-bottom: 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: 900;
+}
+
+.btn-on {
+  color: var(--clr-white);
+  background-color: var(--clr-bright-blue);
+  filter: drop-shadow(0 1rem 1rem var(--clr-light-blue));
+}
+.btn-on:hover {
+  background-color: var(--clr-light-blue);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    font-size: 1rem;
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    line-height: 1.6;
+  }
+  #order-summary {
+    padding: 2.5rem 3rem 10px;
+  }
+  .plan {
+    padding: 1.5rem;
+    margin: 1.2rem auto 1.8rem;
+  }
+  .btn {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
